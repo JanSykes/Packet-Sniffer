@@ -1,0 +1,19 @@
+import logging
+
+
+Log_Format = "%(levelname)s %(asctime)s - %(message)s"
+
+logging.basicConfig(filename = "tcp.log",
+                    filemode = "w",
+                    format = Log_Format, 
+                    level = logging.ERROR)
+
+logger = logging.getLogger()
+
+logger.setLevel(logging.DEBUG)
+
+logger.debug("Debugged Successfully") 
+logger.info("No information available") 
+logger.warning("Warning") 
+logger.error("Error occured") 
+logger.critical("Failed")
